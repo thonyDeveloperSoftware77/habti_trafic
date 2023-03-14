@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -10,7 +11,7 @@ const firebaseConfig = {
   projectId: "habittracking-57eec",
   storageBucket: "habittracking-57eec.appspot.com",
   messagingSenderId: "106060701383",
-  appId: "1:106060701383:web:47fd403c5924432b29a8e2"
+  appId: "1:106060701383:web:416e43d329fb675129a8e2"
 };
 
 // Initialize Firebase
