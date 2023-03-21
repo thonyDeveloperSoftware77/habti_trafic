@@ -27,9 +27,7 @@ export const signInWithGoogle = async () => {
     // Check if this is the first time the user has signed in
     const docRef = doc(db, "users", userId);
     const docSnap = await getDoc(docRef);
-    if (docSnap.exists()) {
-      console.log("Document data:", docSnap.data());
-    } else {
+    if (!docSnap.exists()) {
       console.log("No such document!");
       try {
         const newDocRef = await setDoc(docRef, {

@@ -1,25 +1,23 @@
 class Habit {
-    private _id: number;
-    private _name: string;
-    private _description: string;
-    private _frequency: string;
-    private _completedDates: Date[];
-    private _userId: number;
+    public _id: string;
+    public _name: string;
+    public _description: string;
+    public _frequency: string;
+    public _completedDates: Date[];
   
-    constructor(id: number, name: string, description: string, frequency: string, completedDates: Date[], userId: number) {
+    constructor(id: string, name: string, description: string, frequency: string, completedDates: Date[]) {
       this._id = id;
       this._name = name;
       this._description = description;
       this._frequency = frequency;
       this._completedDates = completedDates;
-      this._userId = userId;
     }
   
-    get id(): number {
+    get id(): string {
       return this._id;
     }
   
-    set id(id: number) {
+    set id(id: string) {
       this._id = id;
     }
   
@@ -53,14 +51,6 @@ class Habit {
   
     set completedDates(completedDates: Date[]) {
       this._completedDates = completedDates;
-    }
-  
-    get userId(): number {
-      return this._userId;
-    }
-  
-    set userId(userId: number) {
-      this._userId = userId;
     }
   
     addCompletedDate(date: Date): void {

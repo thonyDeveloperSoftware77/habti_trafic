@@ -6,12 +6,10 @@ import { useRouter } from 'next/router';
 
 function SignInButton() {
   const router = useRouter();
-
-
   const handleSignIn = () => {
     signInWithGoogle()
       .then((user) => {
-        router.push('/register');
+        router.push('/principal');
       })
       .catch((error) => {
         console.log(error);

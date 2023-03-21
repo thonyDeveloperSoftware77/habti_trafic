@@ -4,14 +4,12 @@ class User {
     private _id: number;
     private _name: string;
     private _email: string;
-    private _password: string;
     private _habits: Habit[];
   
-    constructor(id: number, name: string, email: string, password: string, habits: Habit[]) {
+    constructor(id: number, name: string, email: string, habits: Habit[]) {
       this._id = id;
       this._name = name;
       this._email = email;
-      this._password = password;
       this._habits = habits;
     }
   
@@ -37,14 +35,6 @@ class User {
   
     set email(email: string) {
       this._email = email;
-    }
-  
-    get password(): string {
-      return this._password;
-    }
-  
-    set password(password: string) {
-      this._password = password;
     }
   
     get habits(): Habit[] {
