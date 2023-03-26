@@ -18,7 +18,12 @@ export const addHabit = async (habit: Habit, userId: string, habits: Habit[], se
         _id: habit.id,
         _name: habit.name,
         _description: habit.description,
-        _frequency: habit.frequency,
+        _daily: habit.daily,
+        _weekly: habit.weekly,
+        _monthly: habit.monthly,
+        _customize: habit.customize,
+        _customDays: habit.customDays,
+        _selectedTime: habit.selectedTime,
         _completedDates: habit.completedDates,
       }),
     });
@@ -27,7 +32,12 @@ export const addHabit = async (habit: Habit, userId: string, habits: Habit[], se
       habit.id,
       habit.name,
       habit.description,
-      habit.frequency,
+      habit._daily,
+      habit._weekly,
+      habit._monthly,
+      habit._customize,
+      habit._customDays,
+      habit._selectedTime,
       habit.completedDates
     );
 
@@ -69,7 +79,12 @@ export const updateHabit = async (
         _id: habit._id,
         _name: habit._name,
         _description: habit._description,
-        _frequency: habit._frequency,
+        _daily: habit._daily,
+        _weekly: habit._weekly,
+        _monthly: habit._monthly,
+        _customize: habit._customize,
+        _customDays: habit._customDays,
+        _selectedTime: habit._selectedTime,
         _completedDates: habit._completedDates
       };
       newHabits[habitIndex] = habitData;
